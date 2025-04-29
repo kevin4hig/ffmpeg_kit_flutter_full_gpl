@@ -24,12 +24,20 @@ class Statistics {
   double _videoFps;
   double _videoQuality;
   int _size;
-  int _time;
+  double _time; // Cambiado de int a double
   double _bitrate;
   double _speed;
 
-  Statistics(this._sessionId, this._videoFrameNumber, this._videoFps,
-      this._videoQuality, this._size, this._time, this._bitrate, this._speed);
+  Statistics(
+    this._sessionId,
+    this._videoFrameNumber,
+    this._videoFps,
+    this._videoQuality,
+    this._size,
+    this._time,
+    this._bitrate,
+    this._speed,
+  );
 
   int getSessionId() => this._sessionId;
 
@@ -61,9 +69,10 @@ class Statistics {
     this._size = size;
   }
 
-  int getTime() => this._time;
+  double getTime() => this._time; // Cambiado de int a double
 
-  void setTime(int time) {
+  void setTime(double time) {
+    // Cambiado de int a double
     this._time = time;
   }
 
